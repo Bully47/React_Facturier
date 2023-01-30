@@ -1,3 +1,9 @@
+[![React](https://img.shields.io/badge/React-brightgreen.svg?logo=react&style=flat-square)](https://reactjs.org/)
+[![React Router DOM(https://img.shields.io/badge/React%20Router%20DOM-brightgreen.svg?logo=react-router-dom&style=flat-square)](https://reacttraining.com/react-router/)
+[![Firebase](https://img.shields.io/badge/Firebase-brightgreen.svg?logo=firebase&style=flat-square)](https://firebase.google.com/)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)](#)
+![Work in Progress](https://img.shields.io/badge/Status-Work%20In%20Progress-yellow)
+
 ## React_Facturier
 
 React_Facturier is a web application made with React, React Router DOM and Firebase. The app is designed to allow users to manage their invoicing in a simple and efficient manner.
