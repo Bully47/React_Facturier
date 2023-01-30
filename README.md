@@ -1,5 +1,5 @@
 [![React](https://img.shields.io/badge/React-brightgreen.svg?logo=react&style=flat-square)](https://reactjs.org/)
-[![React Router DOM(https://img.shields.io/badge/React-Router-brightgreen.svg?logo=react-router-dom&style=flat-square)](https://reacttraining.com/react-router/)
+[![React Router DOM(https://img.shields.io/badge/React%20Router-brightgreen.svg?logo=react-router-dom&style=flat-square)](https://reacttraining.com/react-router/)
 [![Firebase](https://img.shields.io/badge/Firebase-brightgreen.svg?logo=firebase&style=flat-square)](https://firebase.google.com/)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)](#)
 ![Work in Progress](https://img.shields.io/badge/Status-Work%20In%20Progress-yellow)
@@ -24,3 +24,6 @@ https://facturier-74319.web.app/
 
 ### Author
 - Vivien Huc
+
+## License
+This project is licensed under the terms of the MIT license.
