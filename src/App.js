@@ -10,6 +10,8 @@ import Login from "./Pages/Login/Login"
 import Register from "./Pages/Register/Register"
 import Reset from "./Pages/Reset/Reset"
 
+import Dashboard from "./Pages/Dashboard/Dashboard"
+
 import "./App.css"
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
 					<Route exact path="/login" element={<Login />} />
 					<Route exact path="/register" element={<Register />} />
 					<Route exact path="/reset" element={<Reset />} />
+					<Route exact path="/dashboard" element={<Dashboard />} />
 					<Route path="*" element={<Error404 />} />
 				</Route>
 			</Routes>

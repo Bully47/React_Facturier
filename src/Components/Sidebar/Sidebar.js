@@ -28,6 +28,13 @@ function Sidebar() {
 						<Link
 							className="sidebar_Link"
 							onClick={() => setIsOpen(false)}
+							to="/dashboard"
+						>
+							Dashboard
+						</Link>
+						<Link
+							className="sidebar_Link"
+							onClick={() => setIsOpen(false)}
 							to="/"
 						>
 							Home
