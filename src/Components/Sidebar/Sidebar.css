@@ -1,0 +1,117 @@
+/* MENU BURGER */
+#menu_burger {
+	width: 60px;
+	height: 45px;
+	position: fixed;
+	right: 1vw;
+	top: 1vw;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+	cursor: pointer;
+}
+
+#menu_burger span {
+	display: block;
+	position: absolute;
+	height: 9px;
+	width: 100%;
+	background: var(--bleu);
+	border-radius: 9px;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: 0.25s ease-in-out;
+	-moz-transition: 0.25s ease-in-out;
+	-o-transition: 0.25s ease-in-out;
+	transition: 0.25s ease-in-out;
+}
+
+#menu_burger span:nth-child(1) {
+	top: 0px;
+}
+
+#menu_burger span:nth-child(2),
+#menu_burger span:nth-child(3) {
+	top: 18px;
+}
+
+#menu_burger span:nth-child(4) {
+	top: 36px;
+}
+
+#menu_burger.open span:nth-child(1) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+
+#menu_burger.open span:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+#menu_burger.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+#menu_burger.open span:nth-child(4) {
+	top: 18px;
+	width: 0%;
+	left: 50%;
+}
+
+/* SIDEBAR */
+.sidebar {
+	box-shadow: 2px 1px 3px 0px rgba(0, 0, 0, 0.2),
+		0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 30%;
+	background: var(--bleu_gradient);
+	transition: all 0.5s ease;
+	transform: translateX(-100%);
+	z-index: 1000;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin-top: 5vh;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	flex-grow: 1;
+	text-align: center;
+	transition: all 0.2s ease;
+	font-size: 2em;
+}
+
+nav a:hover {
+	transform: scale(1.03);
+	font-weight: bold;
+}
+
+.sidebar.open {
+	transform: translateX(0%);
+}
