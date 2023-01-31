@@ -16,9 +16,17 @@ function Home() {
 				</svg>
 			</div>
 			<h1>Bienvenue sur l'application</h1>
-			<Link to="/404" className="btn btn_bleu">
-				Aller quelque part
-			</Link>
+			<div>
+				<Link to="/dashboard" className="btn btn_bleu">
+					Dashboard
+				</Link>
+				<Link to="/customers" className="btn btn_bleu">
+					Clients
+				</Link>
+				<Link to="/invoicces" className="btn btn_bleu">
+					Factures
+				</Link>
+			</div>
 		</div>
 	)
 }

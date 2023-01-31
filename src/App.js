@@ -11,6 +11,8 @@ import Register from "./Pages/Register/Register"
 import Reset from "./Pages/Reset/Reset"
 
 import Dashboard from "./Pages/Dashboard/Dashboard"
+import Customers from "./Pages/Customers/Customers"
+import CreateCustomer from "./Pages/CreateCustomer/CreateCustomer"
 
 import "./App.css"
 
@@ -24,6 +26,8 @@ function App() {
 					<Route exact path="/register" element={<Register />} />
 					<Route exact path="/reset" element={<Reset />} />
 					<Route exact path="/dashboard" element={<Dashboard />} />
+					<Route exact path="/customers" element={<Customers />} />
+					<Route exact path="/customers/create" element={<CreateCustomer />} />
 					<Route path="*" element={<Error404 />} />
 				</Route>
 			</Routes>

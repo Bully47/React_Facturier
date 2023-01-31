@@ -35,6 +35,20 @@ function Sidebar() {
 						<Link
 							className="sidebar_Link"
 							onClick={() => setIsOpen(false)}
+							to="/customers"
+						>
+							Clients
+						</Link>
+						<Link
+							className="sidebar_Link"
+							onClick={() => setIsOpen(false)}
+							to="/invoices"
+						>
+							Factures
+						</Link>
+						<Link
+							className="sidebar_Link"
+							onClick={() => setIsOpen(false)}
 							to="/"
 						>
 							Home

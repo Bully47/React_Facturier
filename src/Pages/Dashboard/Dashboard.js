@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useAuthState } from "react-firebase-hooks/auth"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { auth, db, logout } from "../../Config/Firebase"
 import { query, collection, getDocs, where } from "firebase/firestore"
 
@@ -36,8 +36,18 @@ function Dashboard() {
 				<button className="btn btn_bleu" onClick={logout}>
 					Déconnexion
 				</button>
-				<div className="dashboard_recettes_container">
-					{/* Recettes */}
+				<div className="dashboard_customers_container">
+					<Link className="btn btn_bleu" to={"/customers"}>
+						Clients
+					</Link>
+					<Link className="btn btn_bleu" to={"/customers/create"}>
+						Ajouter un Client
+					</Link>
+				</div>
+				<div className="dashboard_invoices_container">
+					<Link className="btn btn_bleu" to={"/invoices"}>
+						Factures
+					</Link>
 				</div>
 			</div>
 		</div>
