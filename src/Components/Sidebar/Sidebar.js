@@ -1,10 +1,13 @@
 import React, { useState } from "react"
 import { Outlet, Link } from "react-router-dom"
+import { useAuthState } from "react-firebase-hooks/auth"
+import { auth } from "../../Config/Firebase"
 
 import "./Sidebar.css"
 
 function Sidebar() {
 	const [isOpen, setIsOpen] = useState(false)
+	const [user] = useAuthState(auth)
 
 	return (
 		<>
@@ -14,52 +17,52 @@ function Sidebar() {
 						<Link
 							className="sidebar_Link"
 							onClick={() => setIsOpen(false)}
-							to="/login"
-						>
-							Login
-						</Link>
-						<Link
-							className="sidebar_Link"
-							onClick={() => setIsOpen(false)}
-							to="/register"
-						>
-							Register
-						</Link>
-						<Link
-							className="sidebar_Link"
-							onClick={() => setIsOpen(false)}
-							to="/dashboard"
-						>
-							Dashboard
-						</Link>
-						<Link
-							className="sidebar_Link"
-							onClick={() => setIsOpen(false)}
-							to="/customers"
-						>
-							Clients
-						</Link>
-						<Link
-							className="sidebar_Link"
-							onClick={() => setIsOpen(false)}
-							to="/invoices"
-						>
-							Factures
-						</Link>
-						<Link
-							className="sidebar_Link"
-							onClick={() => setIsOpen(false)}
 							to="/"
 						>
 							Home
 						</Link>
-						<Link
-							className="sidebar_Link"
-							onClick={() => setIsOpen(false)}
-							to="/Erreur_404"
-						>
-							404
-						</Link>
+						{!user ? (
+							<>
+								<Link
+									className="sidebar_Link"
+									onClick={() => setIsOpen(false)}
+									to="/login"
+								>
+									Login
+								</Link>
+								<Link
+									className="sidebar_Link"
+									onClick={() => setIsOpen(false)}
+									to="/register"
+								>
+									Register
+								</Link>
+							</>
+						) : (
+							<>
+								<Link
+									className="sidebar_Link"
+									onClick={() => setIsOpen(false)}
+									to="/dashboard"
+								>
+									Dashboard
+								</Link>
+								<Link
+									className="sidebar_Link"
+									onClick={() => setIsOpen(false)}
+									to="/customers"
+								>
+									Clients
+								</Link>
+								<Link
+									className="sidebar_Link"
+									onClick={() => setIsOpen(false)}
+									to="/invoices"
+								>
+									Factures
+								</Link>
+							</>
+						)}
 					</nav>
 				</div>
 			</div>

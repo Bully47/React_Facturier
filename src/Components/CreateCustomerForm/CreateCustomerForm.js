@@ -24,7 +24,7 @@ function CreateCustomerForm({ user }) {
 		try {
 			addDoc(collection(db, "Customers"), newCustomer)
 		} catch (err) {
-			console.log(err)
+			alert(err)
 		}
 		if (checked)
 			setNewCustomer({
