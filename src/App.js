@@ -14,6 +14,10 @@ import Dashboard from "./Pages/Dashboard/Dashboard"
 import Customers from "./Pages/Customers/Customers"
 import CreateCustomer from "./Pages/CreateCustomer/CreateCustomer"
 
+// React Notification
+import { NotificationContainer } from "react-notifications"
+import "../node_modules/react-notifications/lib/notifications.css"
+
 import "./App.css"
 
 function App() {
@@ -21,6 +25,7 @@ function App() {
 		<>
 			<Routes>
 				<Route path="/" element={<Sidebar />}>
+
 					<Route index element={<Home />} />
 					<Route exact path="/login" element={<Login />} />
 					<Route exact path="/register" element={<Register />} />
@@ -31,6 +36,8 @@ function App() {
 					<Route path="*" element={<Error404 />} />
 				</Route>
 			</Routes>
+			<NotificationContainer />
+
 		</>
 	)
 }
