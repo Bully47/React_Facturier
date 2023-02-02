@@ -20,13 +20,15 @@ function CreateCustomerForm({ user }) {
 		postalCode: "",
 	})
 
-	function capitalizeFirstLetter(string) {
-		return string.charAt(0).toUpperCase() + string.slice(1)
-	}
+	// Not Working
+	// function capitalizeFirstLetter(string) {
+	// 	return string.charAt(0).toUpperCase() + string.slice(1)
+	// }
 
 	function checkCustomer() {
 		let emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 		let phoneRegex = /^\d{10}$/
+		let postalCodeRegex = /^[0-9]{5}$/
 
 		if (newCustomer.email === "") {
 			NotificationManager.error(
@@ -48,13 +50,26 @@ function CreateCustomerForm({ user }) {
 				"Erreur",
 				2000
 			)
+		} else if (newCustomer.postalCode === "") {
+			NotificationManager.error(
+				`Le code postal ne peux pas être vide.`,
+				"Erreur",
+				2000
+			)
+		} else if (!postalCodeRegex.test(newCustomer.postalCode)) {
+			NotificationManager.error(
+				`Le code postal n'est pas valide.`,
+				"Erreur",
+				2000
+			)
 		} else {
-			setNewCustomer({
-				...newCustomer,
-				firstName: capitalizeFirstLetter(newCustomer.firstName),
-				lastName: capitalizeFirstLetter(newCustomer.lastName),
-				city: capitalizeFirstLetter(newCustomer.city),
-			})
+			// Not Working
+			// setNewCustomer({
+			// 	...newCustomer,
+			// 	firstName: capitalizeFirstLetter(newCustomer.firstName),
+			// 	lastName: capitalizeFirstLetter(newCustomer.lastName),
+			// 	city: capitalizeFirstLetter(newCustomer.city),
+			// })
 			addCustomer()
 		}
 	}

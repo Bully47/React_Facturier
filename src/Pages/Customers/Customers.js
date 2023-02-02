@@ -68,7 +68,6 @@ function Customers() {
 								{customers.map((customer) => (
 									<tr
 										key={customer.id}
-										// onClick={() => navigate(`/customer/${customer.id}`)}
 									>
 										<td>
 											{customer.firstName} {customer.lastName}
@@ -100,7 +99,7 @@ function Customers() {
 													fill="red"
 													enable-background="new 0 0 24 24"
 													viewBox="0 0 24 24"
-													onClick={() => navigate(`/customer/${customer.id}`)}
+													onClick={() => navigate(`/customers/${customer.id}`)}
 													className="table_icon"
 												>
 													<g
