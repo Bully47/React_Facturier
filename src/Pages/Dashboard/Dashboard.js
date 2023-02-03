@@ -44,9 +44,20 @@ function Dashboard() {
 						Ajouter un Client
 					</Link>
 				</div>
+				<div className="dashboard_services_container">
+					<Link className="btn btn_bleu" to={"/services"}>
+						Prestations
+					</Link>
+					<Link className="btn btn_bleu" to={"/services/create"}>
+						Ajouter une Prestation
+					</Link>
+				</div>
 				<div className="dashboard_invoices_container">
 					<Link className="btn btn_bleu" to={"/invoices"}>
 						Factures
+					</Link>
+					<Link className="btn btn_bleu" to={"/invoices"}>
+						Facturer un Client
 					</Link>
 				</div>
 			</div>
