@@ -1,0 +1,62 @@
+.invoices_page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--gris_gradient);
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+.table_icon {
+	transform: scale(3);
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.table_cell_icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.invoices_container {
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0px 0px 10px #888888;
+	width: 90%;
+	min-height: 40vh;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 5px;
+}
+
+.invoices_table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.invoices_table th,
+.invoices_table td {
+	border: 1px solid #ddd;
+	padding: 12px 35px;
+	text-align: left;
+}
+
+.invoices_table th {
+	background-color: #f5f5f5;
+	color: #333;
+	font-weight: bold;
+}
+
+.invoices_table tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+.invoices_table tr:hover {
+	background-color: #f5f5f5;
+}

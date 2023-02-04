@@ -81,7 +81,7 @@ function CreateServiceForm({ user }) {
 				<input
 					placeholder=" "
 					aria-describedby="tooltip"
-					value={newService.email}
+					value={newService.price}
 					type="number"
 					onChange={(e) =>
 						setNewService({ ...newService, price: e.target.value })

@@ -56,9 +56,6 @@ function Dashboard() {
 					<Link className="btn btn_bleu" to={"/invoices"}>
 						Factures
 					</Link>
-					<Link className="btn btn_bleu" to={"/invoices"}>
-						Facturer un Client
-					</Link>
 				</div>
 			</div>
 		</div>

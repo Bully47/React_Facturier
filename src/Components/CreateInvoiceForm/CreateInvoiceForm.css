@@ -1,0 +1,52 @@
+.create_invoice_form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+}
+
+.select_service_input {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+}
+
+label[for="services"] {
+	margin-right: 1em;
+}
+
+select {
+	border: 2px solid var(--bleu);
+	padding: 0.5em;
+	font-size: 16px;
+	width: 100%;
+	border-radius: 4px;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table_header {
+	background-color: #e2e8f0;
+	font-weight: bold;
+}
+
+.table_row {
+	border-bottom: 1px solid #cbd5e0;
+}
+
+.table_cell {
+	padding: 0.75rem;
+	text-align: left;
+}
+
+.table_input {
+	width: 4rem;
+	padding: 0.375rem;
+	border-radius: 0.25rem;
+	border: 1px solid #cbd5e0;
+}

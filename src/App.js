@@ -17,6 +17,8 @@ import CreateCustomer from "./Pages/CreateCustomer/CreateCustomer"
 import UpdateCustomer from "./Pages/UpdateCustomer/UpdateCustomer"
 import CreateService from "./Pages/CreateService/CreateService"
 import Services from "./Pages/Services/Services"
+import Invoices from "./Pages/Invoices/Invoices"
+import CreateInvoice from "./Pages/CreateInvoice/CreateInvoice"
 
 import { NotificationContainer } from "react-notifications"
 import "../node_modules/react-notifications/lib/notifications.css"
@@ -43,6 +45,8 @@ function App() {
 						element={<UpdateCustomer />}
 					/>
 					<Route exact path="/services" element={<Services />} />
+					<Route exact path="/invoices" element={<Invoices />} />
+					<Route exact path="/invoices/create/:clientID" element={<CreateInvoice />} />
 
 					<Route path="*" element={<Error404 />} />
 				</Route>
