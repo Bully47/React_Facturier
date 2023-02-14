@@ -1,20 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import {
-	collection,
-	doc,
-	getDocs,
-	getDoc,
-	query,
-	where,
-} from "@firebase/firestore"
+import { collection, getDocs, addDoc, query, where } from "@firebase/firestore"
 import { NotificationManager } from "react-notifications"
 import { db } from "../../Config/Firebase"
 import axios from "axios"
 
 import "./CreateInvoiceForm.css"
 
-function CreateInvoiceForm({ user, customer }) {
+function CreateInvoiceForm({ user, customer, customerID }) {
 	const navigate = useNavigate()
 	const [total, setTotal] = useState(0)
 	const [services, setServices] = useState([])
@@ -41,6 +34,24 @@ function CreateInvoiceForm({ user, customer }) {
 			customer: customer,
 			user: user,
 		})
+		if (response.status === 200) {
+			try {
+				let invoice_data = {
+					userID: user.uid,
+					customerID: customerID,
+					customer: customer,
+					services: selectedServices,
+				}
+				addDoc(collection(db, "Invoices"), invoice_data).then(() => {
+					NotificationManager.success("Facture créée avec succès")
+					navigate("/invoices")
+				})
+			} catch (error) {
+				NotificationManager.error(`${error}`)
+			}
+			// NotificationManager.success("Facture créée avec succès")
+			// navigate("/invoices")
+		}
 	}
 
 	function updateTotal() {

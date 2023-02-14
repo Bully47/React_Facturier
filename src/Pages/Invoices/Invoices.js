@@ -58,14 +58,14 @@ function Invoices() {
 							<thead>
 								<tr>
 									<th>Nom</th>
-									<th>Prix</th>
+									<th>Montant</th>
 								</tr>
 							</thead>
 							<tbody>
 								{invoices.map((invoice) => (
 									<tr key={invoice.id}>
-										<td>{invoice.name}</td>
-										<td>{invoice.price}</td>
+										<td>{invoice.customer.firstName} {invoice.customer.lastName}</td>
+										<td>€</td>
 
 										<td>
 											<div className="table_cell_icons">

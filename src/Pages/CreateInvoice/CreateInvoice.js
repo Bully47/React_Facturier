@@ -34,7 +34,7 @@ function CreateInvoice() {
 			{!isLoading ? (
 				<>
 					<div className="create_invoice_container">
-						<CreateInvoiceForm user={user} customer={customer} />
+						<CreateInvoiceForm user={user} customer={customer} customerID={id.clientID} />
 					</div>
 				</>
 			) : (
